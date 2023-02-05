@@ -26,7 +26,11 @@ app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/upload", uploadRoutes);
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:5000", "https://rapped-hoodiesat.onrender.com"],
+  })
+);
 
 app.get("/api/config/paypal", (req, res) =>
   res.send(process.env.PAYPAL_CLIENT_ID)
