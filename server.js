@@ -28,7 +28,7 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use(
   cors({
-    origin: ["http://localhost:5000", "https://rapped-hoodiesat.onrender.com"],
+    origin: ["http://localhost:5000", "https://ecom-app12-nxvj.onrender.com/"],
   })
 );
 
