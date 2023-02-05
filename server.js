@@ -26,11 +26,6 @@ app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/upload", uploadRoutes);
-app.use(
-  cors({
-    origin: ["http://localhost:5000", "https://ecom-app12-nxvj.onrender.com/"],
-  })
-);
 
 app.get("/api/config/paypal", (req, res) =>
   res.send(process.env.PAYPAL_CLIENT_ID)
@@ -56,6 +51,11 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
+app.use(
+  cors({
+    origin: ["", "https://rapped-hoodiesat.onrender.com"],
+  })
+);
 app.listen(
   PORT,
   console.log(
