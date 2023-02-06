@@ -53,7 +53,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: ["", "https://rapped-hoodiesat.onrender.com"],
+    origin: ["http://localhost:3000", "https://rapped-hoodiesat.onrender.com"],
   })
 );
 app.listen(
